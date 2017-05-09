@@ -3,6 +3,12 @@ module Main exposing (..)
 import Html exposing (..)
 import Html.Events exposing (onClick)
 
+import Css exposing (asPairs, color)
+import Css.Colors exposing (green)
+import Html.Attributes exposing (style)
+import Html exposing (..)
+import Html.Events exposing (onClick)
+
 
 main : Program Never Int Msg
 main =
@@ -28,9 +34,10 @@ update msg model =
             model - 1
 
 
+
 view : Int -> Html Msg
 view count =
-    div []
+    div [ (style << asPairs) [ color green ] ]
         [ h1 [] [ text "Prairie Chicken, Lesser" ]
         , h2 [] [ text "An Accounting of Hens" ]
         , div []
